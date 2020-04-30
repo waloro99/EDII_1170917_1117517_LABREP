@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\walte\\.nuget\\packages\\": {},
+    "C:\\Users\\majoj\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\walte\\OneDrive\\Documentos\\papucho\\2020\\7mo Ciclo\\Estructuras II\\Repositorio EstrucII\\LabRepoED2\\EDII_1170917_1117517_LABREP\\LABREPO_ED2\\LABREPO_ED2.csproj",
+      "projectUniqueName": "D:\\Universidad\\1er ciclo 2020\\EstructuraII\\Lab\\F\\Repo\\EDII_1170917_1117517_LABREP\\LABREPO_ED2\\LABREPO_ED2.csproj",
       "projectName": "LABREPO_ED2",
-      "projectPath": "C:\\Users\\walte\\OneDrive\\Documentos\\papucho\\2020\\7mo Ciclo\\Estructuras II\\Repositorio EstrucII\\LabRepoED2\\EDII_1170917_1117517_LABREP\\LABREPO_ED2\\LABREPO_ED2.csproj",
-      "packagesPath": "C:\\Users\\walte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\walte\\OneDrive\\Documentos\\papucho\\2020\\7mo Ciclo\\Estructuras II\\Repositorio EstrucII\\LabRepoED2\\EDII_1170917_1117517_LABREP\\LABREPO_ED2\\obj\\",
+      "projectPath": "D:\\Universidad\\1er ciclo 2020\\EstructuraII\\Lab\\F\\Repo\\EDII_1170917_1117517_LABREP\\LABREPO_ED2\\LABREPO_ED2.csproj",
+      "packagesPath": "C:\\Users\\majoj\\.nuget\\packages\\",
+      "outputPath": "D:\\Universidad\\1er ciclo 2020\\EstructuraII\\Lab\\F\\Repo\\EDII_1170917_1117517_LABREP\\LABREPO_ED2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\walte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\majoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -57,6 +57,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.3, 3.0.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -65,7 +83,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
