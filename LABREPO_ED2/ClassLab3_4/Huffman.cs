@@ -45,8 +45,7 @@ namespace LABREPO_ED2.ClassLab3_4
         //Public Functions
 
         //method for compress file
-        public void Compress
-            (string rPath, string wPath)
+        public void Compress (string rPath, string wPath)
         {
             int BitsToRead = 0;
             double charcount = 0.0;
@@ -72,8 +71,7 @@ namespace LABREPO_ED2.ClassLab3_4
         }
 
         //method to know the value the rc,fc and pr
-        public string GetFilesMetrics
-            (string Name, string Original, string Compresed)
+        public string GetFilesMetrics (string Name, string Original, string Compresed)
         {
             string Metrics = Name.Replace(".txt", "") + '|';
             double RC, FC, PR;
