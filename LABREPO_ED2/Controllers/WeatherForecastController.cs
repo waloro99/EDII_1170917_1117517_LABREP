@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using LABREPO_ED2.ClassLab5;
+using LABREPO_ED2.ClassLab6;
 
 namespace LABREPO_ED2.Controllers
 {
@@ -340,6 +341,63 @@ namespace LABREPO_ED2.Controllers
         //------------------------------ END ENDPOINTS LAB 5 -------------------------------------------
 
         //------------------------------ ENDPOINTS LAB 6 -----------------------------------------------
+
+        // -http://localhost:4689/weatherforecast/cipher/GetPublicKey
+        [HttpGet("cipher/GetPublicKey", Name = "GetPublicKey")]
+        public IEnumerable<PublicKey> Get(double x) 
+        {
+            int p = 37;
+            int q = 7;
+            string publicKey = @"publickey.txt";//save publickey
+            string privatekey = @"privatekey.txt";
+            RSA rsa = new RSA(p, q, publicKey, privatekey);
+
+            List<PublicKey> keys = new List<PublicKey>();
+            PublicKey key = new PublicKey();
+            key.method = "RSA";
+            key.publickeyN = rsa.n;
+            key.publickeyE = rsa.e;
+            keys.Add(key);
+
+            return keys;
+        }
+
+        // localhost:51626/weatherforecast/cipher/caesar2
+        [HttpPost("cipher/caesar2", Name = "PostCaesar2")]
+        public async Task<string> Post([FromForm]FileUploadAPI objFile)
+        {
+            try
+            {
+                if (objFile.files.Length > 0)
+                {
+                    if (!Directory.Exists(_environment.WebRootPath + "\\Upload\\"))
+                    {
+                        Directory.CreateDirectory(_environment.WebRootPath + "\\Upload\\");
+                    }
+                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Upload\\" + objFile.files.FileName))
+                    {
+                        objFile.files.CopyTo(fileStream);
+                        fileStream.Flush();
+                        fileStream.Close();
+                        string name = objFile.files.FileName.ToString();
+                        string NewPath = _environment.WebRootPath + "\\Upload\\" + name;
+                        RSA rsa = new RSA();
+                        rsa.Decode(@NewPath, @"KeyCesar.txt", @"publicKey.txt");
+                        return "Return key dechiper";
+                    }
+                }
+                else
+                {
+                    return "Failed";
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+        }
+
         //------------------------------ END ENDPOINTS LAB 6 -------------------------------------------
 
 
