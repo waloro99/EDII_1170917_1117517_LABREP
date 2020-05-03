@@ -199,9 +199,10 @@ namespace LABREPO_ED2.Controllers
                         {
                             if (name.Contains(".huff"))
                             {
-                                string decompressH = "";
-                                decompressH = hf.uncompress(@NewPath);
-                                return decompressH;
+                                string namefile = GetFileName(name);
+                                string wPath = "decompress" + namefile;
+                                hf.uncompress(@NewPath,@wPath);
+                                return "Uncompress successful huffman";
                             }
                             return "You need file .huff";
                         }
@@ -382,7 +383,7 @@ namespace LABREPO_ED2.Controllers
                         string name = objFile.files.FileName.ToString();
                         string NewPath = _environment.WebRootPath + "\\Upload\\" + name;
                         RSA rsa = new RSA();
-                        rsa.Decode(@NewPath, @"KeyCesar.txt", @"publicKey.txt");
+                        rsa.Decode(@NewPath, @"KeyCesar.txt", @"privatekey.txt");
                         return "Return key dechiper";
                     }
                 }

@@ -247,7 +247,7 @@ namespace LABREPO_ED2.ClassLab3_4
 
         //----------------------------------------- UNCOMPRESS -----------------------------------------
         //method for uncompress file
-        public string uncompress(string path)
+        public void uncompress(string path, string wpath)
         {
             string fullfile = "";
             Dictionary<char, Byte[]> dictionary = new Dictionary<char, Byte[]>();
@@ -284,7 +284,10 @@ namespace LABREPO_ED2.ClassLab3_4
 
             }
 
-            return fullfile;
+            using (StreamWriter writer = new StreamWriter(wpath))
+            {
+                writer.WriteLine(fullfile);
+            }
         }
 
 

@@ -1,0 +1,6 @@
+C:\Users\walte\OneDrive\Documentos\papucho\2020\7mo Ciclo\Estructuras II\Repositorio EstrucII\LabRepoED2\EDII_1170917_1117517_LABREP\CipherCaesar2\bin\Debug\CipherCaesar2.exe.config
+C:\Users\walte\OneDrive\Documentos\papucho\2020\7mo Ciclo\Estructuras II\Repositorio EstrucII\LabRepoED2\EDII_1170917_1117517_LABREP\CipherCaesar2\bin\Debug\CipherCaesar2.exe
+C:\Users\walte\OneDrive\Documentos\papucho\2020\7mo Ciclo\Estructuras II\Repositorio EstrucII\LabRepoED2\EDII_1170917_1117517_LABREP\CipherCaesar2\bin\Debug\CipherCaesar2.pdb
+C:\Users\walte\OneDrive\Documentos\papucho\2020\7mo Ciclo\Estructuras II\Repositorio EstrucII\LabRepoED2\EDII_1170917_1117517_LABREP\CipherCaesar2\obj\Debug\CipherCaesar2.csprojAssemblyReference.cache
+C:\Users\walte\OneDrive\Documentos\papucho\2020\7mo Ciclo\Estructuras II\Repositorio EstrucII\LabRepoED2\EDII_1170917_1117517_LABREP\CipherCaesar2\obj\Debug\CipherCaesar2.exe
+C:\Users\walte\OneDrive\Documentos\papucho\2020\7mo Ciclo\Estructuras II\Repositorio EstrucII\LabRepoED2\EDII_1170917_1117517_LABREP\CipherCaesar2\obj\Debug\CipherCaesar2.pdb
