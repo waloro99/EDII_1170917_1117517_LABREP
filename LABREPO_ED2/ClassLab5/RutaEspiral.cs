@@ -111,7 +111,7 @@ namespace LABREPO_ED2.ClassLab5
             {
                 using (var writer = new BinaryWriter(file))
                 {
-                    char[,] data = FSpiral(rPath, key);
+                    char[,] data = FVertical(rPath, key);//FSpiral
                     int rows = data.Length / key;
                     int columns = key;
                     for (int i = 0; i < columns; i++)
@@ -135,7 +135,7 @@ namespace LABREPO_ED2.ClassLab5
             {
                 using (var writer = new BinaryWriter(file))
                 {
-                    char[,] data = FVertical(rPath, key);
+                    char[,] data = FSpiral(rPath, key); //FVertical
                     int rows = data.Length / key;
                     int columns = key;
                     for (int i = 0; i < columns; i++)

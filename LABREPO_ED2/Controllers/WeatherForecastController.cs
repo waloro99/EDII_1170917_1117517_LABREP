@@ -10,6 +10,7 @@ using LABREPO_ED2.ClassLab3_4;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using LABREPO_ED2.ClassLab5;
 
 namespace LABREPO_ED2.Controllers
 {
@@ -222,7 +223,6 @@ namespace LABREPO_ED2.Controllers
             }
         }
 
-
         // localhost:51626/weatherforecast/compressions
         [HttpGet("compressions", Name = "GetFile")]
         /*[Route("weatherforecast/Sodas/")]*/
@@ -261,6 +261,81 @@ namespace LABREPO_ED2.Controllers
 
         //------------------------------ ENDPOINTS LAB 5 -----------------------------------------------
 
+        private static readonly IMethod methodData = new Method();
+
+        // localhost:51626/weatherforecast/cipher/?Cifrado=caesar
+        [HttpPost("cipher", Name = "PostCipher")]
+        public async Task<string> Post(string Cifrado,[FromBody]MethodClass newMethod)
+        {
+            try
+            {
+                switch (Cifrado)
+                {
+                    case "zigzag":
+                        methodData.CipherZigZag(newMethod.rPath, newMethod.wPath, newMethod.key);
+                        break;
+                    case "caesar":
+                        methodData.CipherCesar(newMethod.rPath, newMethod.wPath, newMethod.word);
+                        break;
+                    case "ruta":
+                        if (newMethod.TypeRuta == "vertical")
+                        {
+                            methodData.CipherRutaV(newMethod.rPath, newMethod.wPath, newMethod.key);
+                        }
+                        else if (newMethod.TypeRuta == "spiral")
+                        {
+                            methodData.CipherRutaS(newMethod.rPath, newMethod.wPath, newMethod.key);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                return "Cipher successful";
+                       
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+        }
+
+        // localhost:51626/weatherforecast/decipher/?Decifrado=caesar
+        [HttpPost("decipher", Name = "PostDecipher")]
+        public async Task<string> Post(string Decifrado, [FromBody]MethodClass newMethod,int x)
+        {
+            try
+            {
+                switch (Decifrado)
+                {
+                    case "zigzag":
+                        methodData.DecipherZigZag(newMethod.rPath, newMethod.wPath, newMethod.key);
+                        break;
+                    case "caesar":
+                        methodData.DecipherCesar(newMethod.rPath, newMethod.wPath, newMethod.word);
+                        break;
+                    case "ruta":
+                        if (newMethod.TypeRuta == "vertical")
+                        {
+                            methodData.DecipherRutaV(newMethod.rPath, newMethod.wPath, newMethod.key);
+                        }
+                        else if (newMethod.TypeRuta == "spiral")
+                        {
+                            methodData.DecipherRutaS(newMethod.rPath, newMethod.wPath, newMethod.key);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                return "Decipher successful";
+
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+        }
 
         //------------------------------ END ENDPOINTS LAB 5 -------------------------------------------
 
